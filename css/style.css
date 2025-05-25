@@ -1,0 +1,459 @@
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    padding: 0%;
+    margin: 0%;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+
+/*-------Header-----------*/
+.navbar-nav .nav-link {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+/*header { 
+    background-color: black;
+    padding: 10px;
+    position: sticky;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header nav ul {
+    list-style:none;
+    display: flex;
+    align-items: center;
+    padding: 0%;
+    margin: 0;
+}
+    header nav ul li a {
+    text-decoration:none;
+    color: white;
+    margin: 2px ;
+    }
+
+
+
+/*-------Main--------------*/
+
+.hero {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/hamburguesas.PNG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* Se mueve con el scroll (o usa 'fixed' si quieres que se quede fijo) */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero {
+    position: relative;
+    color: white;
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: #111110c9;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+
+}
+
+/*Para hacer tu pedido ----*/
+
+.pedido div {
+    width: 100%;
+    max-width: 100%;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px;
+    background-color: black;
+}
+
+.pedido div h2 {
+    font-size: 30px;
+    border: 3px solid #ff6600;
+    color: white;
+}
+
+.pedido div a {
+    border-radius: 7px;
+    text-decoration: none;
+    color: white;
+    background-color: grey;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 10px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.pedido div a:hover {
+    background-color: #ff6600;
+    color: #000;
+    cursor: pointer;
+}
+
+/*------las hamb preferidas----*/
+.preferidas .preferidas-tarj {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.preferidas h2 {
+    text-align: center;
+    font-size: 30px;
+    background-color: grey;
+    color: black;
+    padding: 20px;
+}
+
+.preferidas .preferidas-tarj div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Esto empuja el botón hacia abajo */
+    border: 1px solid black;
+    text-align: center;
+    width: 250px;
+    height: 400px;
+    margin: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    /* para que padding no aumente el tamaño */
+}
+
+.preferidas div h3 {
+    margin: 5px;
+}
+
+.preferidas div img {
+    width: 100%;
+    height: 250px;
+
+}
+
+.preferidas .preferidas-tarj div a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #ff6600;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.preferidas .preferidas-tarj div a:hover {
+    background-color: #ff6600;
+    color: #000;
+    cursor: pointer;
+}
+
+.preferidas div p {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+/*---------sobre nosotros----------*/
+.nosotros {
+    background-color: #1e1e1e;
+    /* gris oscuro / casi negro */
+    color: #f0f0f0;
+    /* texto claro */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.nosotros h2 {
+    font-size: 40px;
+    color: #ff6600;
+    /* naranja llamativo */
+    margin-bottom: 20px;
+}
+
+.nosotros p {
+    font-size: 20px;
+    color: #ccc;
+    /* gris claro */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/*menu 2 doc-------------*/
+.menu h1 {
+    color: #051520;
+    text-align: center;
+}
+
+/*-----------Footer---------*/
+footer {
+    background-color: grey;
+}
+
+footer a img {
+    width: 100;
+    height: 100;
+}
+
+/*responsive para pantallas pequeñas*/
+@media screen and (max-width:382px) {
+    /*   header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+} 
+@media (max-width:588px){
+    .hero{
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+        padding: 20px;
+        min-height: 70vh;
+    }
+    .hero h1{
+        font-size: 2.5rem;
+        padding: 10px;
+    }
+}
+@media (max-width:1075px) and (min-width:350px){
+    .pedido div {
+        align-items: center;
+    }
+}
+@media (min-width:1076){
+    .preferidas .preferidas-tarj h2{
+        width: 350px;
+    }
+}
+@media (max-width: 768px) {
+    .preferidas .preferidas-tarj {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width:500px){
+    .nosotros{
+        font-size: 15;
+    }
+}
+
+/*--------menu---------*/
+
+    .menu {
+        padding: 2px 1px 40px;
+        text-align: center;
+        color: white;
+    }
+
+    .menu h2 {
+        text-align: center;
+        font-size: 30px;
+        background-color: grey;
+        color: black;
+        padding: 10px 20px;
+    }
+
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .item {
+        background-color: #222;
+        border-radius: 12px;
+        text-align: center;
+        padding: 15px;
+        transition: transform 0.3s ease;
+    }
+
+    .item:hover {
+        transform: scale(1.05);
+    }
+
+    .item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .item h3 {
+        margin-top: 10px;
+        font-size: 1.2em;
+        color: #fff;
+    }
+
+    /*responsive de menu*/
+    @media (max-width: 1075px) and (min-width: 350px) {
+        .menu-grid {
+            grid-template-columns: 1fr;
+            padding: 0 20px;
+        }
+    }
+
+    /*-------promociones-----------*/
+    .promociones {
+        padding: 40px 20px;
+        text-align: center;
+        background-color: #121212;
+        color: white;
+    }
+
+    .promociones h2 {
+        font-size: 32px;
+        background-color: grey;
+        color: #000;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+
+    .promo-card {
+        background-color: #1f1f1f;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        margin: 20px auto;
+        max-width: 600px;
+        padding: 20px;
+        text-align: left;
+        color: #fff;
+        justify-content: center;
+    }
+
+    .promo-card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .promo-card h3 {
+        color: #ff6600;
+        /* naranja llamativo */
+        margin-bottom: 10px;
+    }
+
+    .promo-card p {
+        font-size: 16px;
+        color: #ccc;
+    }
+
+    /*------responsive promociones----*/
+    @media screen and (max-width: 768px) {
+        .promo-card {
+            max-width: 350px;
+            padding: 15px;
+        }
+
+        .promociones h2 {
+            font-size: 24px;
+            padding: 10px;
+        }
+
+        .promo-card h3 {
+            font-size: 18px;
+        }
+
+        .promo-card p {
+            font-size: 14px;
+        }
+    }
+
+    /* -----------Sobre nosotros-------------*/
+    .sobre-nosotros {
+        background-color: #111;
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .sobre-nosotros h1 {
+        text-align: center;
+        font-size: 30px;
+        padding: 2px 1px 40px;
+        color: #ff6600;
+
+    }
+
+    .sobre-nosotros div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .sobre-nosotros img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .sobre-nosotros p {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    /*-----------responsive nosotros------*/
+    @media screen and (max-width: 855px) {
+        .sobre-nosotros div {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .sobre-nosotros p {
+            font-size: 16px;
+        }
+    }
