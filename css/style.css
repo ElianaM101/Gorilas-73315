@@ -11,8 +11,9 @@ body {
     font-family: "Poppins", sans-serif;
     font-style: normal;
 }
+
 /*------------Header-------------*/
-header { 
+header {
     background-color: black;
     padding: 10px;
     position: sticky;
@@ -24,18 +25,20 @@ header {
 }
 
 header nav ul {
-    list-style:none;
+    list-style: none;
     display: flex;
     align-items: center;
     padding: 0%;
     margin: 0;
 }
-    header nav ul li a {
-    text-decoration:none;
+
+header nav ul li a {
+    text-decoration: none;
     color: white;
-    margin: 2px ;
-    }
-    .navbar-nav .nav-link {
+    margin: 2px;
+}
+
+.navbar-nav .nav-link {
     font-weight: bold;
     text-transform: uppercase;
     padding: 10px 15px;
@@ -59,7 +62,6 @@ header nav ul {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    /* Se mueve con el scroll (o usa 'fixed' si quieres que se quede fijo) */
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -144,7 +146,6 @@ header nav ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Esto empuja el botón hacia abajo */
     border: 1px solid black;
     text-align: center;
     width: 250px;
@@ -152,7 +153,6 @@ header nav ul {
     margin: 15px;
     padding: 15px;
     box-sizing: border-box;
-    /* para que padding no aumente el tamaño */
 }
 
 .preferidas div h3 {
@@ -193,17 +193,14 @@ header nav ul {
 /*---------sobre nosotros----------*/
 .nosotros {
     background-color: #1e1e1e;
-    /* gris oscuro / casi negro */
     color: #f0f0f0;
-    /* texto claro */
     padding: 50px 20px;
     text-align: center;
 }
 
 .nosotros h2 {
     font-size: 40px;
-    color: #ff6600;
-    /* naranja llamativo */
+    color: #ff5000;
     margin-bottom: 20px;
 }
 
@@ -243,219 +240,319 @@ footer i:hover {
 
 /*responsive para pantallas pequeñas*/
 @media screen and (max-width:382px) {
-      header{
+    header {
         flex-direction: column;
         align-items: center;
     }
 
-    nav ul{
+    nav ul {
         flex-direction: column;
         align-items: center;
     }
-} 
-@media (max-width:588px){
-    .hero{
+}
+
+@media (max-width:588px) {
+    .hero {
         background-position: center;
         background-size: cover;
         background-attachment: scroll;
         padding: 20px;
         min-height: 70vh;
     }
-    .hero h1{
+
+    .hero h1 {
         font-size: 2.5rem;
         padding: 10px;
     }
 }
-@media (max-width:1075px) and (min-width:350px){
+
+@media (max-width:1075px) and (min-width:350px) {
     .pedido div {
         align-items: center;
     }
 }
-@media (min-width:1076){
-    .preferidas .preferidas-tarj h2{
+
+@media (min-width:1076) {
+    .preferidas .preferidas-tarj h2 {
         width: 350px;
     }
 }
+
 @media (max-width: 768px) {
     .preferidas .preferidas-tarj {
         flex-direction: column;
         align-items: center;
     }
 }
-@media (max-width:500px){
-    .nosotros{
+
+@media (max-width:500px) {
+    .nosotros {
         font-size: 15;
     }
 }
 
 /*--------menu---------*/
 
-    .menu {
-        padding: 2px 1px 40px;
-        text-align: center;
-        color: white;
-    }
+.menu {
+    padding: 2px 1px 40px;
+    text-align: center;
+    color: white;
+}
 
-    .menu h2 {
-        text-align: center;
-        font-size: 30px;
-        background-color: grey;
-        color: black;
-        padding: 10px 20px;
-    }
+.menu h2 {
+    text-align: center;
+    font-size: 30px;
+    background-color: grey;
+    color: black;
+    padding: 10px 20px;
+}
 
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 10px;
+}
+
+.item {
+    background-color: #222;
+    border-radius: 12px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.item h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+/*responsive de menu*/
+@media (max-width: 600px) and (min-width: 350px) {
     .menu-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 10px;
+        grid-template-columns: 1fr;
+        padding: 0 20px;
     }
+}
 
-    .item {
-        background-color: #222;
-        border-radius: 12px;
-        text-align: center;
+/*-------promociones-----------*/
+.promociones {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+}
+
+.promociones h2 {
+    font-size: 32px;
+    background-color: grey;
+    color: #000;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.promo-card {
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    text-align: left;
+    color: #fff;
+    justify-content: center;
+}
+
+.promo-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.promo-card h3 {
+    color: #ff6600;
+    /* naranja llamativo */
+    margin-bottom: 10px;
+}
+
+.promo-card p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/*------responsive promociones----*/
+@media screen and (max-width: 768px) {
+    .promo-card {
+        max-width: 350px;
         padding: 15px;
-        transition: transform 0.3s ease;
-    }
-
-    .item:hover {
-        transform: scale(1.05);
-    }
-
-    .item img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-
-    .item h3 {
-        margin-top: 10px;
-        font-size: 1.2em;
-        color: #fff;
-    }
-
-    /*responsive de menu*/
-    @media (max-width: 1075px) and (min-width: 350px) {
-        .menu-grid {
-            grid-template-columns: 1fr;
-            padding: 0 20px;
-        }
-    }
-
-    /*-------promociones-----------*/
-    .promociones {
-        padding: 40px 20px;
-        text-align: center;
-        background-color: #121212;
-        color: white;
     }
 
     .promociones h2 {
-        font-size: 32px;
-        background-color: grey;
-        color: #000;
-        padding: 15px;
-        border-radius: 10px;
-        margin-bottom: 30px;
-    }
-
-    .promo-card {
-        background-color: #1f1f1f;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-        margin: 20px auto;
-        max-width: 600px;
-        padding: 20px;
-        text-align: left;
-        color: #fff;
-        justify-content: center;
-    }
-
-    .promo-card img {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 15px;
+        font-size: 24px;
+        padding: 10px;
     }
 
     .promo-card h3 {
-        color: #ff6600;
-        /* naranja llamativo */
-        margin-bottom: 10px;
+        font-size: 18px;
     }
 
     .promo-card p {
-        font-size: 16px;
-        color: #ccc;
+        font-size: 14px;
+    }
+}
+
+/*---------Contacto----------------*/
+
+.info-box {
+    border: 2px solid #ccc;
+    background-color: grey;
+    padding: 10px 15px;
+    margin: 20px 15;
+    border-radius: 10px;
+
+}
+
+.grid-horarios {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* Día | Horario */
+    gap: 10px 20px;
+    margin-top: 10px;
+}
+
+.grid-horarios .dia {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0a0a0a;
+}
+
+.grid-horarios .hora {
+    color: #0a0a0a;
+    font-weight: bold;
+}
+
+
+.info-box h2,
+h3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.pedidowpp {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-wpp {
+    background-color: #25D366;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-wpp:hover {
+    background-color: #128C7E;
+}
+
+.mapa iframe {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+/*-----responsive contacto--------------*/
+
+@media (max-width: 900px) {
+    .info-box {
+        padding: 1rem;
     }
 
-    /*------responsive promociones----*/
-    @media screen and (max-width: 768px) {
-        .promo-card {
-            max-width: 350px;
-            padding: 15px;
-        }
-
-        .promociones h2 {
-            font-size: 24px;
-            padding: 10px;
-        }
-
-        .promo-card h3 {
-            font-size: 18px;
-        }
-
-        .promo-card p {
-            font-size: 14px;
-        }
+    .horarios-grid {
+        font-size: 1rem;
     }
+}
 
-    /* -----------Sobre nosotros-------------*/
-    .sobre-nosotros {
-        background-color: #111;
-        color: white;
-        padding: 40px 20px;
+@media (max-width: 600px) {
+    .horarios-grid {
+        grid-template-columns: 1fr;
         text-align: center;
     }
+}
 
-    .sobre-nosotros h1 {
-        text-align: center;
-        font-size: 30px;
-        padding: 2px 1px 40px;
-        color: #ff6600;
-
+@media (min-width: 1200px) {
+    .info-box {
+        max-width: 1000px;
+        margin: 0 auto;
     }
+}
 
+
+/* -----------Sobre nosotros-------------*/
+.sobre-nosotros {
+    background-color: #111;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.sobre-nosotros h1 {
+    text-align: center;
+    font-size: 30px;
+    padding: 2px 1px 40px;
+    color: #ff6600;
+
+}
+
+.sobre-nosotros div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.sobre-nosotros img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.sobre-nosotros p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/*-----------responsive nosotros------*/
+@media screen and (max-width: 855px) {
     .sobre-nosotros div {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        text-align: left;
-    }
-
-    .sobre-nosotros img {
-        width: 100%;
-        max-width: 400px;
-        border-radius: 12px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        flex-direction: column;
+        text-align: center;
     }
 
     .sobre-nosotros p {
-        font-size: 20px;
-        line-height: 1.6;
+        font-size: 16px;
     }
-
-    /*-----------responsive nosotros------*/
-    @media screen and (max-width: 855px) {
-        .sobre-nosotros div {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .sobre-nosotros p {
-            font-size: 16px;
-        }
-    }
+}
