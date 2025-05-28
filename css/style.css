@@ -1,13 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
-    margin: 0%;
+    margin: 0;
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 body {
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
     font-family: "Poppins", sans-serif;
     font-style: normal;
 }
@@ -15,33 +14,18 @@ body {
 /*------------Header-------------*/
 header {
     background-color: black;
-    padding: 10px;
-    position: sticky;
-    margin-top: 0;
+    padding: 5px ;
+    margin-top: 5px;
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-start;
     align-items: center;
     z-index: 1;
 }
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    padding: 0%;
-    margin: 0;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    margin: 2px;
-}
-
 .navbar-nav .nav-link {
     font-weight: bold;
     text-transform: uppercase;
-    padding: 10px 15px;
+    padding: 10px 10px;
+    margin: 5px 6px;
 }
 
 .navbar-brand img {
@@ -49,8 +33,12 @@ header nav ul li a {
 }
 
 .navbar {
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    background-color: black; /* Mantené el fondo negro */
 }
+.navbar-collapse {
+    background-color: black;
+}
+
 
 /*-------Main--------------*/
 
@@ -93,14 +81,15 @@ header nav ul li a {
 .pedido div {
     width: 100%;
     max-width: 100%;
-    margin: 5px;
+    margin: 0px ;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 60px;
+    padding: 50px;
     background-color: black;
 }
+
 
 .pedido div h2 {
     font-size: 30px;
@@ -140,6 +129,7 @@ header nav ul li a {
     background-color: grey;
     color: black;
     padding: 20px;
+    margin: 3px 1px;
 }
 
 .preferidas .preferidas-tarj div {
@@ -150,8 +140,8 @@ header nav ul li a {
     text-align: center;
     width: 250px;
     height: 400px;
-    margin: 15px;
-    padding: 15px;
+    margin: 13px;
+    padding: 13px;
     box-sizing: border-box;
 }
 
@@ -167,13 +157,13 @@ header nav ul li a {
 
 .preferidas .preferidas-tarj div a {
     display: inline-block;
-    padding: 3px 5px;
-    margin-top: 3px 5px;
+    padding: 3px 4px;
+    margin-top: 3px 4px;
     background-color: #333;
     color: #fff;
     border: 1px solid #ff6600;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 13px;
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -185,7 +175,7 @@ header nav ul li a {
 }
 
 .preferidas div p {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     color: black;
 }
@@ -232,25 +222,7 @@ footer i:hover {
     color: #ff6600;
 }
 
-/*-------menu 2 doc-------------*/
-.menu h1 {
-    color: #051520;
-    text-align: center;
-}
-
 /*responsive para pantallas pequeñas*/
-@media screen and (max-width:382px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 @media (max-width:588px) {
     .hero {
         background-position: center;
@@ -420,8 +392,8 @@ footer i:hover {
 .info-box {
     border: 2px solid #ccc;
     background-color: grey;
-    padding: 10px 15px;
-    margin: 20px 15;
+    padding: 1px 1px;
+    margin-top: auto;
     border-radius: 10px;
 
 }
