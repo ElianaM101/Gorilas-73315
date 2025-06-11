@@ -1,0 +1,43 @@
+.menu {
+    h1 {
+        @extend %titulo-principal;
+        text-align: center;
+        font-size: 30px;
+        background-color: grey;
+        color: black;
+        padding: 10px 20px;
+    }
+
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 10px;
+
+        .item {
+            background-color: #222;
+            border-radius: 12px;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+
+            h3 {
+                margin-top: 10px;
+                font-size: 1.2em;
+                color: #fff;
+            }
+        }
+    }
+}

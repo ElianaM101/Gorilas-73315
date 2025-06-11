@@ -1,0 +1,30 @@
+header {
+    background-color: $color-principal;
+    padding: 5px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+}
+
+.navbar {
+    background-color: black;
+
+    &-brand img {
+        max-height: 40px;
+    }
+
+    &-collapse {
+        background-color: black;
+    }
+
+    &-nav {
+        .nav-link {
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px 10px;
+            margin: 5px 6px;
+        }
+    }
+}

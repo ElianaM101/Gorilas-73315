@@ -1,0 +1,107 @@
+//index
+@media (max-width: 500px) {
+    .nosotros {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 588px) {
+    .hero {
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+        padding: 20px;
+        min-height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 1075px) {
+    .pedido div {
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .preferidas .preferidas-tarj {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1076px) {
+    .preferidas .preferidas-tarj h2 {
+        width: 350px;
+    }
+}
+
+//responsive menu
+@media (max-width: 600px) and (min-width: 350px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+}
+
+//responsive promociones
+@media screen and (max-width: 768px) {
+    .promo-card {
+        max-width: 350px;
+        padding: 15px;
+    }
+
+    .promociones h1 {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .promo-card h2,
+    .promo-card h3 {
+        font-size: 18px;
+    }
+
+    .promo-card p {
+        font-size: 14px;
+    }
+}
+
+//responsive contacto
+@media (max-width: 900px) {
+    .info-box {
+        padding: 1rem;
+    }
+
+    .grid-horarios {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-horarios {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .info-box {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+//responsive nosotros
+@media screen and (max-width: 855px) {
+    .sobre-nosotros div {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-nosotros p {
+        font-size: 16px;
+    }
+}

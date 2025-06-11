@@ -1,0 +1,70 @@
+// 1. VARIABLES
+$color-principal: #ff6600;
+$color-secundario: #000;
+$color-terciario: #333;
+$color-texto: #fff;
+$gris: grey;
+$color-sombra: rgba(0, 0, 0, 0.4);
+$font-size-titulo: 30px;
+$font-size-parrafo: 20px;
+$border-radius: 10px;
+$transition: all 0.3s ease;
+
+// 2. MIXINS
+
+@mixin centrar-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint ==mobile {
+        @media (max-width: 600px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==tablet {
+        @media (max-width: 900px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==desktop {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}
+
+// 3. EXTENDS
+
+%boton-base {
+    padding: 10px 20px;
+    border-radius: $border-radius;
+    font-weight: bold;
+    text-decoration: none;
+    transition: $transition;
+}
+
+%titulo-principal {
+    font-size: $font-size-titulo;
+    background-color: $gris;
+    color: $color-secundario;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+%imagen-responsive {
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius;
+}
