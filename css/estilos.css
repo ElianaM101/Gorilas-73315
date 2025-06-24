@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.menu h1 {
+.sobre-nosotros .titulo-nosotros, .seccion-titulo h1, .promociones h1, .menu h1 {
   font-size: 30px;
+  font-weight: 600;
   background-color: grey;
   color: #000;
-  padding: 10px 20px;
+  padding: 15px 0;
   text-align: center;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 0 25px 0;
+  text-transform: uppercase;
 }
 
 * {
@@ -19,37 +24,66 @@ body {
   font-style: normal;
 }
 
-header {
-  background-color: #ff6600;
-  padding: 5px;
-  margin-top: 5px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  z-index: 1;
+nav {
+  background-color: #343a40;
+  border: none;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
 }
 
 .navbar {
-  background-color: black;
-}
-.navbar-brand img {
-  max-height: 40px;
-}
-.navbar-collapse {
-  background-color: black;
-}
-.navbar-nav .nav-link {
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 10px 10px;
-  margin: 5px 6px;
+  width: 100%;
 }
 
-hero {
+.navbar-nav .nav-link {
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff6600;
+}
+
+.btn-outline-success {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-success:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.form-control {
+  margin-left: 20px;
+}
+
+form {
+  position: relative;
+}
+
+.btn-lupa {
+  border: none;
+  color: orange;
+  font-size: 1.3rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
   width: 100%;
   height: 100%;
-  background-image: url("../img/hamburguesas.PNG");
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("../img/hamburguesas.PNG");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -62,9 +96,9 @@ hero {
   color: white;
   max-width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
-hero h1 {
+.hero h1 {
   color: rgba(17, 17, 16, 0.7882352941);
   font-size: 3rem;
   text-shadow: 2px 2px 5px white;
@@ -85,7 +119,7 @@ hero h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 30px;
   background-color: #000;
 }
 .pedido div h2 {
@@ -110,14 +144,10 @@ hero h1 {
   cursor: pointer;
 }
 
-/* Las hamburguesas preferidas */
-.preferidas .preferidas-tarj {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+.preferidas {
+  margin-bottom: 0;
 }
-.preferidas .preferidas-tarj h2 {
+.preferidas h2 {
   text-align: center;
   font-size: 30px;
   background-color: grey;
@@ -125,46 +155,80 @@ hero h1 {
   padding: 20px;
   margin: 3px 1px;
 }
-.preferidas div {
+.preferidas .preferidas-tarj {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 30px 20px;
+}
+.preferidas .preferidas-tarj .tarjetas {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 250px;
+  min-height: 400px;
+  padding: 13px;
   border: 1px solid black;
   text-align: center;
-  width: 250px;
-  height: 400px;
-  margin: 13px;
-  padding: 13px;
   box-sizing: border-box;
+  background-color: white;
+  border-radius: 10px;
 }
-.preferidas div h3 {
-  margin: 5px;
+.preferidas .preferidas-tarj .tarjetas h3 {
+  margin: 5px 0;
 }
-.preferidas div img {
+.preferidas .preferidas-tarj .tarjetas img {
   width: 100%;
   height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
 }
-.preferidas div a {
+.preferidas .preferidas-tarj .tarjetas p {
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+  margin: 10px 0;
+  flex-grow: 1;
+}
+.preferidas .preferidas-tarj .tarjetas a {
   display: inline-block;
-  padding: 3px 4px;
-  margin-top: 3px 4px;
+  padding: 6px 12px;
+  margin-top: 10px;
   background-color: #333;
   color: #fff;
   border: 1px solid #ff6600;
   border-radius: 10px;
-  font-size: 13px;
+  font-size: 14px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
-.preferidas div a:hover {
+.preferidas .preferidas-tarj .tarjetas a:hover {
   background-color: #ff6600;
   color: #000;
   cursor: pointer;
 }
-.preferidas div p {
-  font-size: 12px;
-  font-weight: bold;
-  color: black;
+
+.nosotros {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  padding: 50px 20px;
+  text-align: center;
+}
+.nosotros h2 {
+  font-size: 40px;
+  color: #ff5000;
+  margin-bottom: 20px;
+}
+.nosotros p {
+  font-size: 20px;
+  color: #ccc;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 footer {
@@ -184,129 +248,161 @@ footer i:hover {
 
 .menu h1 {
   text-align: center;
-  font-size: 30px;
+  font-size: 32px;
   background-color: grey;
-  color: black;
-  padding: 10px 20px;
+  color: #000;
+  padding: 15px 0;
+  border-radius: 12px;
+  width: 100%;
+  margin-bottom: 25px;
+  text-transform: uppercase;
 }
-.menu .menu-grid {
+
+.menu-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 30px;
   max-width: 800px;
   margin: 40px auto;
-  padding: 10px;
+  padding: 20px;
 }
-.menu .menu-grid .item {
+
+.item {
   background-color: #222;
   border-radius: 12px;
   text-align: center;
   padding: 15px;
   transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-.menu .menu-grid .item:hover {
+.item:hover {
   transform: scale(1.05);
 }
-.menu .menu-grid .item img {
+.item img {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
 }
-.menu .menu-grid .item h3 {
+.item h3 {
   margin-top: 10px;
   font-size: 1.2em;
   color: #fff;
 }
 
 .promociones {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #121212;
-  color: white;
+  background-color: #f9f9f9;
+  color: #111111;
 }
-.promociones h1 {
-  font-size: 30px;
-  background-color: grey;
-  color: #000;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+.promociones .promociones-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 .promociones .promo-card {
   background-color: #1f1f1f;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  margin: 20px auto;
-  max-width: 600px;
-  padding: 20px;
+  padding: 15px;
   text-align: left;
   color: #fff;
-  justify-content: center;
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+.promociones .promo-card:hover {
+  transform: scale(1.02);
 }
 .promociones .promo-card img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
   margin-bottom: 15px;
+  display: block;
 }
 .promociones .promo-card h2,
 .promociones .promo-card h3 {
   text-align: center;
   color: #ff6600;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 .promociones .promo-card p {
-  font-size: 14px;
+  font-size: 13px;
   color: #ccc;
+  margin-top: auto;
 }
 
-.info-box h1 {
-  text-align: center;
-  font-size: 30px;
-  background-color: grey;
-  color: black;
-  padding: 10px 20px;
-  margin: 0px 0px 8px;
-}
-.info-box h2 {
+.seccion-titulo {
   display: flex;
   justify-content: center;
-  text-align: center;
-  margin-bottom: 15px;
-  color: #000;
 }
-.info-box h3 {
+.seccion-horarios {
   display: flex;
   justify-content: center;
-  text-align: center;
-  margin-bottom: 15px;
-  color: #000;
+  padding: 40px 20px;
 }
-
-.grid-horarios {
+.seccion-horarios .horarios {
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  color: #fff;
+}
+.seccion-horarios .horarios h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.seccion-horarios .horarios .grid-horarios {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 10px 20px;
-  margin-top: 10px;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
-.grid-horarios .dia {
-  font-size: 20px;
-  font-weight: bold;
-  color: #0a0a0a;
+.seccion-horarios .horarios .grid-horarios .bloque {
+  display: flex;
+  justify-content: space-between;
+  background-color: #444;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: none;
 }
-.grid-horarios .hora {
-  color: #0a0a0a;
+.seccion-horarios .horarios .grid-horarios .bloque .dia {
   font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+.seccion-horarios .horarios .grid-horarios .bloque .hora {
+  font-size: 18px;
+  color: #ddd;
 }
 
 .pedidowpp {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.pedidowpp h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
 }
 .pedidowpp .btn-wpp {
-  background-color: #25D366;
+  background-color: #ff6600;
   color: #fff;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: 3px solid #000;
   border-radius: 10px;
   font-size: 16px;
@@ -317,125 +413,356 @@ footer i:hover {
   background-color: #128C7E;
 }
 
-.mapa iframe {
-  width: 100%;
-  border-radius: 10px;
+.mapa {
+  padding: 40px 20px;
+  text-align: center;
+}
+.mapa h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #333;
+}
+.mapa .mapa-container {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border: 2px solid #000;
+}
+.mapa .mapa-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  display: block;
 }
 
 .sobre-nosotros {
   background-color: #111;
   color: white;
-  padding: 40px 20px;
-  text-align: center;
+  padding: 60px 20px;
 }
-.sobre-nosotros h1 {
-  text-align: center;
-  font-size: 30px;
-  padding: 2px 1px 40px;
-  color: #ff6600;
+.sobre-nosotros .titulo-nosotros {
+  color: #000;
+  border: 2px solid #ccc;
+  margin-bottom: 40px;
+  padding: 15px 0;
 }
-.sobre-nosotros div {
+.sobre-nosotros .contenido-nosotros {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
   text-align: left;
 }
-.sobre-nosotros img {
+.sobre-nosotros .contenido-nosotros img {
   width: 100%;
   max-width: 400px;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
-.sobre-nosotros p {
+.sobre-nosotros .contenido-nosotros p {
   font-size: 20px;
-  line-height: 1.6;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-@media (max-width: 500px) {
-  .nosotros {
-    font-size: 15px;
-  }
-}
-@media (max-width: 588px) {
-  .hero {
-    background-position: center;
-    background-size: cover;
-    background-attachment: scroll;
-    padding: 20px;
-    min-height: 70vh;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-    padding: 10px;
-  }
-}
-@media (min-width: 350px) and (max-width: 1075px) {
-  .pedido div {
-    align-items: center;
-  }
-}
 @media (max-width: 768px) {
-  .preferidas .preferidas-tarj {
+  .navbar-nav {
     flex-direction: column;
     align-items: center;
   }
-}
-@media (min-width: 1076px) {
-  .preferidas .preferidas-tarj h2 {
-    width: 350px;
+  .navbar-nav .nav-link {
+    margin: 15px 0;
+    font-size: 1.1rem;
   }
-}
-@media (max-width: 600px) and (min-width: 350px) {
-  .menu-grid {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
   }
-}
-@media screen and (max-width: 768px) {
-  .promo-card {
-    max-width: 350px;
-    padding: 15px;
-  }
-  .promociones h1 {
-    font-size: 24px;
+  .search-bar .form-control {
+    margin-left: 0;
+    margin-top: 10px;
     padding: 10px;
   }
-  .promo-card h2,
-  .promo-card h3 {
-    font-size: 18px;
-  }
-  .promo-card p {
-    font-size: 14px;
+  .btn-lupa {
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 900px) {
-  .info-box {
-    padding: 1rem;
-  }
-  .grid-horarios {
-    font-size: 1rem;
+  .hero h1 {
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 600px) {
-  .grid-horarios {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .hero h1 {
+    font-size: 2rem;
   }
 }
-@media (min-width: 1200px) {
-  .info-box {
-    max-width: 1000px;
+
+@media (max-width: 900px) {
+  .pedido div {
+    padding: 20px;
+  }
+  .pedido div h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .pedido div {
+    padding: 15px;
+  }
+  .pedido div h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .preferidas .preferidas-tarj {
+    gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .preferidas .preferidas-tarj {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .nosotros {
+    padding: 40px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .nosotros {
+    padding: 30px 10px;
+  }
+  .nosotros h2 {
+    font-size: 30px;
+  }
+  .nosotros p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+  .footer i {
+    font-size: 30px;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 15px;
+    margin: 30px auto;
+  }
+  .menu h1 {
+    font-size: 28px;
+    padding: 10px 0;
+  }
+  .item {
+    padding: 10px;
+  }
+  .item img {
+    aspect-ratio: auto;
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+  .item h3 {
+    font-size: 1em;
+  }
+}
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+  .menu h1 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1073px) {
+  .promociones {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .promociones {
+    padding: 0 10px 50px;
+    margin-bottom: 0;
+  }
+  .promociones h1 {
+    font-size: 26px;
+    margin: 0 0 20px;
+    padding: 10px 0;
+  }
+  .promociones .promociones-grid {
+    gap: 15px;
+  }
+  .promociones .promo-card {
+    font-size: 13px;
+    padding: 12px;
+  }
+  .promociones .promo-card img {
+    margin-bottom: 10px;
+  }
+  .promociones .promo-card h2,
+  .promociones .promo-card h3 {
+    font-size: 18px;
+  }
+  .promociones .promo-card p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .promociones h1 {
+    font-size: 22px;
+  }
+  .promo-card h2,
+  .promo-card h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .seccion-titulo h1 {
+    font-size: 28px;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .seccion-horarios {
+    padding: 30px 15px;
+  }
+  .seccion-horarios .horarios {
+    padding: 20px;
+  }
+  .seccion-horarios .horarios h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .seccion-horarios .horarios .grid-horarios {
+    gap: 15px;
+  }
+  .seccion-horarios .horarios .grid-horarios .bloque {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+  }
+  .seccion-horarios .horarios .grid-horarios .bloque .dia,
+  .seccion-horarios .horarios .grid-horarios .bloque .hora {
+    font-size: 16px;
+  }
+  .seccion-horarios .horarios .grid-horarios .bloque .dia {
+    margin-bottom: 5px;
+  }
+  .pedidowpp {
+    padding: 20px 10px;
+  }
+  .pedidowpp h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  .pedidowpp .btn-wpp {
+    font-size: 15px;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  .mapa {
+    padding: 30px 10px;
+  }
+  .mapa h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  .mapa .mapa-container {
+    max-width: 100%;
+  }
+  .mapa .mapa-container iframe {
+    height: 250px;
+  }
+}
+@media (max-width: 480px) {
+  .seccion-titulo h1 {
+    font-size: 24px;
+  }
+  .horarios h2 {
+    font-size: 20px;
+  }
+  .bloque .dia,
+  .bloque .hora {
+    font-size: 15px;
+  }
+  .pedidowpp h3,
+  .mapa h3 {
+    font-size: 18px;
+  }
+  .btn-wpp {
+    width: 100%;
+    font-size: 14px;
+  }
+  .mapa .mapa-container iframe {
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .sobre-nosotros {
+    padding: 40px 15px;
+  }
+  .sobre-nosotros .titulo-nosotros {
+    font-size: 28px;
+    padding: 12px 0;
+    margin-bottom: 30px;
+  }
+  .sobre-nosotros .contenido-nosotros {
+    max-width: 100%;
+    gap: 20px;
+    text-align: center;
+  }
+  .sobre-nosotros .contenido-nosotros img {
+    max-width: 300px;
+    width: 100%;
+  }
+  .sobre-nosotros .contenido-nosotros p {
+    font-size: 18px;
+    max-width: 100%;
     margin: 0 auto;
   }
 }
-@media screen and (max-width: 855px) {
-  .sobre-nosotros div {
-    flex-direction: column;
-    text-align: center;
+@media (max-width: 480px) {
+  .sobre-nosotros {
+    padding: 30px 10px;
   }
-  .sobre-nosotros p {
+  .sobre-nosotros .titulo-nosotros {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .sobre-nosotros .contenido-nosotros {
+    gap: 15px;
+  }
+  .sobre-nosotros .contenido-nosotros img {
+    max-width: 100%;
+  }
+  .sobre-nosotros .contenido-nosotros p {
     font-size: 16px;
   }
 }

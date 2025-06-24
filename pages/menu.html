@@ -5,47 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!------Booststrap nav-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <!---Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <!-------CSS------>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/estilos.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="width: 100%;">
+            <div class="container-fluid px-0">
                 <a class="navbar-brand" href="../index.html">
-                    <img src="../img/logo.png" alt="Logo Gorillaz" height="40">
+                    <img src="../img/logo.png" alt="Logo Gorillaz Food" class="logo-navbar" />
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="../index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="menu.html">Menú</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="promociones.html">Promociones</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contacto.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./nosotros.html">Nosotros</a>
-                        </li>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
+                        <li class="nav-item"><a class="nav-link" href="promociones.html">Promociones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
                     </ul>
+                    <form class="d-flex ms-auto ms-3" role="search">
+                        <button class="btn btn-lupa" type="submit" aria-label="Buscar">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </nav>
-
     </header>
 
     <main>
@@ -53,19 +49,19 @@
             <h1>Nuestro Menú</h1>
             <div class="menu-grid">
                 <div class="item">
-                    <img src="../img/Hamb 6.png" alt="Bacon">
+                    <img src="../img/Hamb 6.jpg" alt="Bacon">
                     <h3>Bacon</h3>
                 </div>
                 <div class="item">
-                    <img src="../img/hamburguesa con taqueño.png" alt="King">
+                    <img src="../img/hamburguesa tequeño.jpg" alt="King">
                     <h3>King</h3>
                 </div>
                 <div class="item">
-                    <img src="../img/hamburguesa doble.png" alt="Gorilla">
-                    <h3>Gorilla</h3>
+                    <img src="../img/simple.jpg" alt="Simple">
+                    <h3>Simple</h3>
                 </div>
                 <div class="item">
-                    <img src="../img/hamburguesa 5.png" alt="Cuatro quesos">
+                    <img src="../img/cuatro quesos .jpg" alt="Cuatro quesos">
                     <h3>Cuatro quesos</h3>
                 </div>
             </div>
@@ -75,7 +71,9 @@
         <a href="https://wa.me/numero" target="_blank"><i class="bi bi-whatsapp"></i></a>
         <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

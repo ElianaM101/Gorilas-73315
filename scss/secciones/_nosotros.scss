@@ -1,33 +1,37 @@
 .sobre-nosotros {
     background-color: #111;
     color: white;
-    padding: 40px 20px;
-    text-align: center;
+    padding: 60px 20px;
 
-    h1 {
-        text-align: center;
-        font-size: 30px;
-        padding: 2px 1px 40px;
-        color: #ff6600;
+    .titulo-nosotros {
+        @extend %titulo-principal;
+        color: $color-secundario;
+        border: 2px solid #ccc;
+        margin-bottom: 40px;
+        padding: 15px 0;
     }
 
-    div {
+    .contenido-nosotros {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        gap: 30px;
+        max-width: 900px;
+        margin: 0 auto;
         text-align: left;
-    }
 
-    img {
-        width: 100%;
-        max-width: 400px;
-        border-radius: 12px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-    }
+        img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        }
 
-    p {
-        font-size: 20px;
-        line-height: 1.6;
+        p {
+            font-size: 20px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
     }
 }

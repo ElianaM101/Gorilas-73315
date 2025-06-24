@@ -1,4 +1,4 @@
-// 1. VARIABLES
+// VARIABLES
 $color-principal: #ff6600;
 $color-secundario: #000;
 $color-terciario: #333;
@@ -10,7 +10,7 @@ $font-size-parrafo: 20px;
 $border-radius: 10px;
 $transition: all 0.3s ease;
 
-// 2. MIXINS
+// MIXINS
 
 @mixin centrar-flex {
     display: flex;
@@ -25,7 +25,7 @@ $transition: all 0.3s ease;
     align-items: center;
 }
 
-@mixin responsive($breakpoint) {
+@mixin responsive-key($breakpoint) {
     @if $breakpoint ==mobile {
         @media (max-width: 600px) {
             @content;
@@ -45,7 +45,7 @@ $transition: all 0.3s ease;
     }
 }
 
-// 3. EXTENDS
+// EXTENDS
 
 %boton-base {
     padding: 10px 20px;
@@ -57,10 +57,16 @@ $transition: all 0.3s ease;
 
 %titulo-principal {
     font-size: $font-size-titulo;
+    font-weight: 600;
     background-color: $gris;
     color: $color-secundario;
-    padding: 10px 20px;
+    padding: 15px 0;
     text-align: center;
+    border-radius: $border-radius;
+    width: 100%;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    
 }
 
 %imagen-responsive {
