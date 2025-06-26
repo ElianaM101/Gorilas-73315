@@ -1,7 +1,7 @@
 .promociones {
-    background-color:#f9f9f9;
+    background-color: #f9f9f9;
     color: #111111;
-
+    padding: 0 2px 40px 3px;
 
     h1 {
         @extend %titulo-principal;
@@ -40,8 +40,7 @@
             display: block;
         }
 
-        h2,
-        h3 {
+        h2 {
             text-align: center;
             color: #ff6600;
             font-size: 20px;
