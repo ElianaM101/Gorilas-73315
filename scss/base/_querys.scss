@@ -1,374 +1,360 @@
- @media (max-width: 768px) {
-     .navbar-nav {
-         flex-direction: column;
-         align-items: center;
+   //NAV
+    @media (max-width: 768px) {
+        .navbar-nav {
+            flex-direction: column;
+            align-items: center;
 
-         .nav-link {
-             margin: 15px 0;
-             font-size: 1.1rem;
-         }
-     }
+            .nav-link {
+                margin: 15px 0;
+                font-size: 1.1rem;
+            }
+        }
 
-     .search-bar {
-         flex-direction: column;
-         align-items: stretch;
+        .search-bar {
+            flex-direction: column;
+            align-items: stretch;
 
-         .form-control {
-             margin-left: 0;
-             margin-top: 10px;
-             padding: 10px;
-         }
-     }
+            .form-control {
+                margin-left: 0;
+                margin-top: 10px;
+                padding: 10px;
+            }
+        }
 
-     .btn-lupa {
-         font-size: 1.2rem;
-     }
- }
+        .btn-lupa {
+            font-size: 1.2rem;
+        }
+    }
+//Main
+.hero{
 
- .hero {
+    @media (max-width: 900px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
 
-     @media (max-width: 900px) {
-         h1 {
-             font-size: 2.5rem;
-         }
-     }
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+}
 
-     @media (max-width: 600px) {
-         h1 {
-             font-size: 2rem;
-         }
-     }
- }
+    .pedido div {
 
- .pedido div {
+        @media (max-width: 900px) {
+            padding: 20px;
 
-     @media (max-width: 900px) {
-         padding: 20px;
+            h2 {
+                font-size: 25px;
+            }
+        }
 
-         h2 {
-             font-size: 25px;
-         }
-     }
+        @media (max-width: 600px) {
+            padding: 15px;
 
-     @media (max-width: 600px) {
-         padding: 15px;
+            h2 {
+                font-size: 20px;
+            }
+        }
+    }
 
-         h2 {
-             font-size: 20px;
-         }
-     }
- }
+    .preferidas {
+        @media (max-width: 900px) {
+            .preferidas-tarj {
+                gap: 20px;
+            }
+        }
 
- .preferidas {
-     @media (max-width: 900px) {
-         .preferidas-tarj {
-             gap: 20px;
-         }
-     }
+        @media (max-width: 600px) {
+            .preferidas-tarj {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
 
-     @media (max-width: 600px) {
-         .preferidas-tarj {
-             flex-direction: column;
-             gap: 10px;
-             align-items: center;
-         }
-         h2{
+            h2 {
+                font-size: 20px;
+            }
+
+            .tarjetas {
+                width: 80%;
+            }
+        }
+    }
+
+    .nosotros {
+        @media (max-width: 900px) {
+            padding: 40px 15px;
+        }
+
+        @media (max-width: 600px) {
+            padding: 30px 10px;
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+    //Menu
+    @media (max-width: 992px) {
+        .menu-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        .menu-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 15px;
+            margin: 30px auto;
+        }
+
+        .menu h1 {
+            font-size: 28px;
+            padding: 10px 0;
+        }
+
+        .item {
+            padding: 10px;
+        }
+
+        .item img {
+            aspect-ratio: auto;
+            max-width: 90%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .item h2 {
+            font-size: 1em;
+        }
+    }
+
+
+    @media (max-width: 600px) {
+        .menu-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .menu h1 {
+            font-size: 24px;
+        }
+    }
+
+    //Promociones
+    @media (min-width: 768px) and (max-width: 1073px) {
+        .promociones {
+            padding-bottom: 40px;
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        .promociones {
+            padding: 0 10px 50px;
+            margin-bottom: 0;
+
+            h1 {
+                font-size: 26px;
+                margin: 0 0 20px;
+                padding: 10px 0;
+            }
+
+            .promociones-grid {
+                gap: 15px;
+            }
+
+            .promo-card {
+                font-size: 13px;
+                padding: 12px;
+
+                img {
+                    margin-bottom: 10px;
+                }
+
+                h2 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .promociones h1 {
+            font-size: 22px;
+        }
+
+        .promo-card h2 {
+            font-size: 16px;
+        }
+    }
+    //Contacto
+    @media (max-width: 768px) {
+        .seccion-titulo {
+            h1 {
+                font-size: 28px;
+                padding: 10px 0;
+                text-align: center;
+            }
+        }
+
+        .seccion-horarios {
+            padding: 30px 15px;
+
+            .horarios {
+                padding: 20px;
+
+                h2 {
+                    font-size: 22px;
+                    margin-bottom: 20px;
+                }
+
+                .grid-horarios {
+                    gap: 15px;
+
+                    .bloque {
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        padding: 12px;
+
+                        .dia,
+                        .hora {
+                            font-size: 16px;
+                        }
+
+                        .dia {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pedidowpp {
+            padding: 20px 10px;
+
+            h3 {
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+
+            .btn-wpp {
+                font-size: 15px;
+                padding: 10px 20px;
+                text-align: center;
+            }
+        }
+
+        .mapa {
+            padding: 30px 10px;
+
+            h3 {
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+
+            .mapa-container {
+                max-width: 100%;
+
+                iframe {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .seccion-titulo h1 {
+            font-size: 24px;
+        }
+
+        .horarios h2 {
             font-size: 20px;
-         }
+        }
 
-         .tarjetas {
-             width: 80%;
-         }
-     }
- }
+        .bloque .dia,
+        .bloque .hora {
+            font-size: 15px;
+        }
 
- .nosotros {
-     @media (max-width: 900px) {
-         padding: 40px 15px;
-     }
+        .pedidowpp h3,
+        .mapa h3 {
+            font-size: 18px;
+        }
 
-     @media (max-width: 600px) {
-         padding: 30px 10px;
+        .btn-wpp {
+            width: 100%;
+            font-size: 14px;
+        }
 
-         h2 {
-             font-size: 20px;
-         }
+        .mapa .mapa-container iframe {
+            height: 200px;
+        }
+    }
+    //Nosotros
+    @media (max-width: 768px) {
+        .sobre-nosotros {
+            padding: 40px 15px;
 
-         p {
-             font-size: 16px;
-         }
-     }
- }
+            .titulo-nosotros {
+                font-size: 28px;
+                padding: 12px 0;
+                margin-bottom: 30px;
+            }
 
- .footer {
+            .contenido-nosotros {
+                max-width: 100%;
+                gap: 20px;
+                text-align: center;
 
-     @media (max-width: 768px) {
-         flex-direction: column;
-         align-items: center;
-         padding: 15px;
+                img {
+                    max-width: 300px;
+                    width: 100%;
+                }
 
-         i {
-             font-size: 30px;
-             margin: 5px;
-         }
-     }
- }
+                p {
+                    font-size: 18px;
+                    max-width: 100%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
 
- @media (max-width: 992px) {
-     .menu-grid {
-         grid-template-columns: repeat(2, 1fr);
-     }
- }
+    @media (max-width: 480px) {
+        .sobre-nosotros {
+            padding: 30px 10px;
 
+            .titulo-nosotros {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
 
- @media (max-width: 768px) {
-     .menu-grid {
-         grid-template-columns: repeat(2, 1fr);
-         gap: 20px;
-         padding: 15px;
-         margin: 30px auto;
-     }
+            .contenido-nosotros {
+                gap: 15px;
 
-     .menu h1 {
-         font-size: 28px;
-         padding: 10px 0;
-     }
+                img {
+                    max-width: 100%;
+                }
 
-     .item {
-         padding: 10px;
-     }
-
-     .item img {
-         aspect-ratio: auto;
-         max-width: 90%;
-         margin: 0 auto;
-         display: block;
-     }
-
-     .item h3 {
-         font-size: 1em;
-     }
- }
-
-
- @media (max-width: 600px) {
-     .menu-grid {
-         grid-template-columns: 1fr;
-         gap: 15px;
-         padding: 10px;
-     }
-
-     .menu h1 {
-         font-size: 24px;
-     }
- }
-
-
- @media (min-width: 768px) and (max-width: 1073px) {
-     .promociones {
-         padding-bottom: 40px;
-     }
- }
-
-
- @media (max-width: 768px) {
-     .promociones {
-         padding: 0 10px 50px;
-         margin-bottom: 0;
-
-         h1 {
-             font-size: 26px;
-             margin: 0 0 20px;
-             padding: 10px 0;
-         }
-
-         .promociones-grid {
-             gap: 15px;
-         }
-
-         .promo-card {
-             font-size: 13px;
-             padding: 12px;
-
-             img {
-                 margin-bottom: 10px;
-             }
-
-             h2,
-             h3 {
-                 font-size: 18px;
-             }
-
-             p {
-                 font-size: 12px;
-             }
-         }
-     }
- }
-
- @media (max-width: 480px) {
-     .promociones h1 {
-         font-size: 22px;
-     }
-
-     .promo-card h2,
-     .promo-card h3 {
-         font-size: 16px;
-     }
- }
-
- @media (max-width: 768px) {
-     .seccion-titulo {
-         h1 {
-             font-size: 28px;
-             padding: 10px 0;
-             text-align: center;
-         }
-     }
-
-     .seccion-horarios {
-         padding: 30px 15px;
-
-         .horarios {
-             padding: 20px;
-
-             h2 {
-                 font-size: 22px;
-                 margin-bottom: 20px;
-             }
-
-             .grid-horarios {
-                 gap: 15px;
-
-                 .bloque {
-                     flex-direction: column;
-                     align-items: center;
-                     text-align: center;
-                     padding: 12px;
-
-                     .dia,
-                     .hora {
-                         font-size: 16px;
-                     }
-
-                     .dia {
-                         margin-bottom: 5px;
-                     }
-                 }
-             }
-         }
-     }
-
-     .pedidowpp {
-         padding: 20px 10px;
-
-         h3 {
-             font-size: 20px;
-             margin-bottom: 12px;
-         }
-
-         .btn-wpp {
-             font-size: 15px;
-             padding: 10px 20px;
-             text-align: center;
-         }
-     }
-
-     .mapa {
-         padding: 30px 10px;
-
-         h3 {
-             font-size: 20px;
-             margin-bottom: 12px;
-         }
-
-         .mapa-container {
-             max-width: 100%;
-
-             iframe {
-                 height: 250px;
-             }
-         }
-     }
- }
-
- @media (max-width: 480px) {
-     .seccion-titulo h1 {
-         font-size: 24px;
-     }
-
-     .horarios h2 {
-         font-size: 20px;
-     }
-
-     .bloque .dia,
-     .bloque .hora {
-         font-size: 15px;
-     }
-
-     .pedidowpp h3,
-     .mapa h3 {
-         font-size: 18px;
-     }
-
-     .btn-wpp {
-         width: 100%;
-         font-size: 14px;
-     }
-
-     .mapa .mapa-container iframe {
-         height: 200px;
-     }
- }
-
- @media (max-width: 768px) {
-     .sobre-nosotros {
-         padding: 40px 15px;
-
-         .titulo-nosotros {
-             font-size: 28px;
-             padding: 12px 0;
-             margin-bottom: 30px;
-         }
-
-         .contenido-nosotros {
-             max-width: 100%;
-             gap: 20px;
-             text-align: center;
-
-             img {
-                 max-width: 300px;
-                 width: 100%;
-             }
-
-             p {
-                 font-size: 18px;
-                 max-width: 100%;
-                 margin: 0 auto;
-             }
-         }
-     }
- }
-
- @media (max-width: 480px) {
-     .sobre-nosotros {
-         padding: 30px 10px;
-
-         .titulo-nosotros {
-             font-size: 24px;
-             margin-bottom: 20px;
-         }
-
-         .contenido-nosotros {
-             gap: 15px;
-
-             img {
-                 max-width: 100%;
-             }
-
-             p {
-                 font-size: 16px;
-             }
-         }
-     }
- }
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
