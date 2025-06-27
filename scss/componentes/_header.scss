@@ -1,10 +1,17 @@
 nav {
     background-color: #343a40;
     border: none;
+    width: 100%;
 }
 
 .navbar-dark .navbar-nav .nav-link {
     color: white;
+    transition: color 0.3s ease;
+}
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #ff6600;  
+    text-decoration: none;
 }
 
 .navbar {
@@ -15,15 +22,6 @@ nav {
     color: #ccc;
     transition: color 0.3s;
 }
-
-.navbar-nav .nav-link:hover {
-    color: #ff6600;
-}
-
-.btn-outline-success {
-    transition: background-color 0.3s, color 0.3s;
-}
-
 .btn-outline-success:hover {
     background-color: #ff6600; 
     color: white; 
